@@ -21,11 +21,22 @@
     <div data-picture data-alt="Picturefill test" id='as'>
 		<script>
 			var el = document.getElementById('as');
-			var ih = as.innerHTML;
-			ih = ih + '<p> DevicePixelRatio = ' + window.getDevicePixelRatio() + '</p>';
-			//ih = ih + '<p> DevicePixelWidth = ' + window.getDevicePixelWidth() + '</p>';
-			//ih = ih + '<p> ViewportWidth = ' + window.getViewportWidth() + '</p>';
-			as.innerHTML = ih;
+			var ih = el.innerHTML;		
+			ih = ih + '<p> DevicePixelRatio = ' + window.getDevicePixelRatio() + '</p>';			
+			el.innerHTML = ih;
+		</script>
+		<script>
+			var el2 = document.getElementById('as');
+			var ih2 = el2.innerHTML;
+			ih2 = ih2 + '<p> DevicePixelWidth = ' + window.getDevicePixelWidth() + '</p>';
+			el2.innerHTML = ih2;
+			ih = ih + '<p> ViewportWidth = ' + window.getViewportWidth() + '</p>';
+		</script>
+		<script>
+			var el3 = document.getElementById('as');
+			var ih3 = el3.innerHTML;
+			ih3 = ih3 + '<p> ViewportWidth = ' + window.getViewportWidth() + '</p>';
+			el3.innerHTML = ih3;			
 		</script>
         <div data-src="img/default.png"></div>
         <div data-src="img/1920x540.png" data-media="(max-device-pixel-width: 1920px)">		</div>
